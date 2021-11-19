@@ -1,0 +1,117 @@
+body {
+    background-color: #aed8f3;
+  }
+  
+  #makePost {
+    width: 125px;
+  }
+  
+  #logout {
+    cursor: pointer;
+  }
+  
+  #dashboard {
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .navbar-shadow:hover {
+    text-shadow: 1px 1px 10px black;
+  }
+  
+  .card-text {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+  }
+  
+  .usernameMain {
+    padding-left: 838px;
+    font-size: 15px;
+  }
+  
+  .dashboard {
+    text-align: center;
+  }
+  
+  .footerMargin {
+    margin-top: 12px;
+  }
+  
+  .postCommentButton {
+    width: 12%;
+  }
+  
+  .login-card {
+    margin-top: 255px;
+  }
+  
+  .col-sm-10 {
+    padding-left: 40px;
+  }
+  
+  .postButton {
+    margin: 37px 40px 0 0;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+  
+  i {
+    color: black;
+  }
+  
+  .header-nav {
+    background-color: #A9A9A9;
+    padding: 0px 60px;
+    border-bottom: black 2px solid;
+  }
+  
+  .card-footer {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+  }
+  
+  .card {
+    border: black 2px solid;
+    margin: 10px 60px;
+  }
+  
+  .top-margin {
+    margin-top: 145px;
+  }
+  
+  .btn-primary {
+    color: black;
+    background-color: #aed8f3;
+    border-color: transparent;
+  }
+  
+  .card-title {
+    color: black;
+  }
+  
+  .btn-primary:hover {
+    color: black;
+    background-color: #aed8f3;
+    border-color: transparent;
+  }
+  
+  .btn-primary::selection, .btn-primary:active, .btn-primary:focus {
+    color: black;
+    background-color: #aed8f3;
+    border-color: transparent;
+    box-shadow: none
+  }
