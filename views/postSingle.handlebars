@@ -1,0 +1,35 @@
+<div class="top-margin">
+    <div class="card text-center">
+        <div class="card-body">
+            <div class="border-homepage">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text">{{post.contents}}</p>
+                <div> Comments: </div>
+                {{#each post.comments}}
+                <div class="row">
+                    <p class="col">{{this.user.username}} commented: "{{this.comment_contents}}"</p>
+                </div>
+                {{/each}}
+                <p>
+                    <button id="{{id}}" class="btn btn-primary" type="button" data-toggle="collapse"
+                        data-target="#collapseExample{{post.id}}" aria-expanded="false"
+                        aria-controls="collapseExample{{post.id}}"><i class="far fa-plus-square"></i>
+                        Comment
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample{{post.id}}">
+                    <div class="card card-body form-floating">
+                        <textarea class="form-control class{{post.id}}" id="floatingTextarea"></textarea>
+                        <button class="mx-auto btn btn-primary postCommentButton" data-id="{{post.id}}">Post
+                            Comment</button>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted by: {{post.user.username}} on {{format_date post.createdAt}}.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='/js/homepage.js'></script>
