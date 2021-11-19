@@ -1,0 +1,51 @@
+<div class="top-margin">
+    <h2 class="dashboard">Your Dashboard</h2>
+    {{#each posts.posts}}
+    <div class="card text-center">
+        <div class="card-body">
+            <div class="border-homepage"></div>
+            <div class="row">
+                <a href="/post/{{this.id}}">
+                    <h5 class="card-title">{{this.title}}</h5>
+                </a>
+            </div>
+            <div class="row justify-content-center">
+                <p>
+                    <a id="{{this.id}}" data-toggle="collapse" data-target="#collapseExample{{id}}"
+                        aria-expanded="false" aria-controls="collapseExample{{this.id}}">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                </p>
+                <div class="collapse" id="collapseExample{{this.id}}">
+                    <div class="card card-body form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <button class="mx-auto btn btn-primary postCommentButton" data-id="{{this.id}}">Update
+                            Post</button>
+                    </div>
+                </div>
+
+                <p class="card-text">{{this.contents}}</p>
+                <div>
+                    Comments:
+                </div>
+                {{#each comments}}
+                <div class="row">
+                    <p class="col">{{this.user.username}} commented: "{{this.comment_contents}}"</p>
+                </div>
+                {{/each}}
+
+                <i data-delete="{{this.id}}" class="fas fa-trash-alt deletePost"></i>
+
+
+                <div class="card-footer text-muted footerMargin">
+                    Posted on: {{format_date this.createdAt}}.
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<script src='/js/dashboard.js'></script>
